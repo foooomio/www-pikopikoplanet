@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="幼年期のみんなー！">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="☆ピコピコプラネット☆">
+    <meta name="twitter:description" content="幼年期のみんなー！">
+    <meta name="twitter:image" content="https://pikopikopla.net/ogp.png">
+    <title>☆ピコピコプラネット☆</title>
+    <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+    <style>
+      body {
+        background-color: #1B284F;
+      }
+      * {
+        text-align: center;
+        font-family: "M PLUS Rounded 1c";
+        color: #ddd;
+      }
+      a {
+        text-underline-position: under;
+        line-height: 1.8rem;
+      }
+      h1 {
+        font-size: 2.3rem;
+        font-family: "Nico Moji";
+        color: #F7D36E;
+        margin: 2.5rem auto;
+      }
+      h1::before, h1::after {
+        content: '☆';
+        font-size: 1.6rem;
+        font-family: "M PLUS Rounded 1c";
+        color: #64C0AB;
+      }
+      h2 {
+        margin: 3rem auto;
+      }
+      #tweet {
+        display: inline-block;
+        background-color: #1da1f2;
+        padding: 0.8rem 2rem;
+        border-radius: 9999px;
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: #fff;
+      }
+      #pr {
+        word-break: keep-all;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ピコピコプラネット</h1>
+    <h2>👾 幼年期のみんなー！</h2>
+    <a id="tweet">✋ はーい！</a>
+    <div id="pr">
+      <a href="https://www.lantis.jp/imas/release_LACM-14826.html">
+        [PR] 『アイドルマスター ミリオンライブ！ シアターデイズ』<br>
+        THE IDOLM@STER MILLION THE@TER GENERATION 16 ピコピコプラネッツ<br>
+        好評発売中！！
+      </a>
+    </div>
+    <div id="contact">💌 Contact me <a href="https://twitter.com/fooooooomio/">@fooooooomio</a></div>
+    <script>
+      'use strict';
+      const list = ['ピピコ！', 'ピコピ！', 'ピココ！'];
+      const random = [...Array(4)].map(() => list[Math.floor(Math.random() * list.length)]).join('');
+      const url = new URL('https://twitter.com/intent/tweet');
+      url.searchParams.set('url', 'https://pikopikopla.net');
+      url.searchParams.set('text', '幼年期のみんなー！ #はーい\n' + random);
+      document.getElementById('tweet').href = url;
+    </script>
+  </body>
+</html>
